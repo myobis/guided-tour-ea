@@ -7,8 +7,11 @@ module.exports = {
   devServer: {
     static: __dirname,
   },
+  performance: {
+    hints: false,
+  },
   output: {
     path: __dirname,
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
 };

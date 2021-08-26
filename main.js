@@ -1,15 +1,16 @@
 import {Map, View} from 'ol';
 import TileLayer from 'ol/layer/Tile';
-import XYZ from 'ol/source/XYZ';
+import Stamen from 'ol/source/Stamen';
 
 new Map({
   target: 'map',
   layers: [
     new TileLayer({
-      source: new XYZ({
-        url: 'https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-      })
-    })
+      source: new Stamen({layer: 'watercolor'}),
+    }),
+    new TileLayer({
+      source: new Stamen({layer: 'toner-labels'}),
+    }),
   ],
   view: new View({
     center: [0, 0],
