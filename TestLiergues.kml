@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>KmlFile</name>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>99ffaa00</color>
+			<width>7</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parks.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/parks.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>99ffaa00</color>
+			<width>2.2</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Folder>
+		<name>Visite de Liergues</name>
+		<open>1</open>
+		<Placemark>
+			<name>Balade du chien</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					 4.661271950044643,45.97067434593328,0 4.660592104759315,45.97107901512707,0 4.660731459014691,45.97122586968906,0 4.660955300742245,45.97138134172526,0 4.661132075485009,45.97152700971633,0 4.660726378975761,45.97169247620207,0 4.660985745216825,45.97202687192341,0 4.660516516623286,45.97229363507478,0 4.660555769490902,45.97249489799955,0 4.660803754263558,45.97276178966035,0 4.661061810340305,45.97290379185125,0 4.661288824340984,45.97288789999493,0 4.661543800867736,45.97296966293401,0 4.662329503114659,45.97305886605944,0 4.663132373993819,45.9734815363238,0 4.66309662490537,45.9736371965467,0 4.66189200534089,45.97414145593665,0 4.661057471670382,45.97425399348622,0 4.6607317736847,45.97424857296652,0 4.660794215859372,45.97437033492583,0 4.660646626651097,45.9744967274632,0 4.660484232774412,45.97460219434632,0 4.660152355803087,45.9749032899706,0 4.659150872335212,45.97509447348199,0 4.658500590037402,45.97522551242125,0 4.658587106497778,45.97543227553106,0 4.656266497486945,45.97545882079576,0 4.656132081751663,45.97515736349975,0 4.656572487123114,45.97506859868462,0 4.656271026784422,45.97440424277987,0 4.65792932836022,45.97400617567164,0 4.659055223003117,45.97377050838905,0 4.660140804039701,45.97335357045163,0 4.659848762254606,45.97297014909169,0 4.659775097702507,45.97276485430253,0 4.659966633252129,45.97228373682552,0 4.659834849191284,45.97167541558854,0 4.660141267259603,45.97160472556676,0 4.660393397944413,45.97126963134111,0 4.660602177012567,45.97102881341514,0 4.661315624079831,45.97063680878594,0
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Le Saule</name>
+			<description><![CDATA[<img src="https://picsum.photos/536/354">]]></description>
+			<Camera>
+				<longitude>4.662369381959646</longitude>
+				<latitude>45.97029293038632</latitude>
+				<altitude>638.4333800547587</altitude>
+				<heading>-3.353244525816387</heading>
+				<tilt>27.16305351185531</tilt>
+				<roll>1.135120772119114</roll>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</Camera>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>4.661025659721307,45.97283139524901,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>
