@@ -5,6 +5,16 @@ import KML from 'ol/format/KML';
 import {fromLonLat} from 'ol/proj';
 import VectorSource from 'ol/source/Vector';
 import {Vector as VectorLayer} from 'ol/layer';
+import Feature from 'ol/Feature';
+import {Icon, Style} from 'ol/style';
+import Point from 'ol/geom/Point';
+import Geolocation from 'ol/Geolocation';
+
+
+let myView = new View({
+  center: fromLonLat([4.663223,45.9704547]),
+  zoom: 15
+});
 
 
 let kmlLayer = new VectorLayer({
@@ -12,6 +22,45 @@ let kmlLayer = new VectorLayer({
     url: './TestLiergues.kml',
     format: new KML()
   })
+});
+
+
+const positionFeature = new Feature({
+  geometry: new Point(fromLonLat([4.663223,45.9704547])),
+  name: 'Vous êtes ici',
+});
+const positionStyle = new Style({
+  image: new Icon({
+    src: 'blueArrow.png',
+    rotateWithView: true,
+    scale: 1,
+    rotation: 45 * Math.PI / 180,
+  }),
+});
+positionFeature.setStyle(positionStyle);
+const positionSource = new VectorSource({
+  features: [positionFeature],
+});
+const positionLayer = new VectorLayer({
+  source: positionSource,
+});
+
+
+const geolocation = new Geolocation({
+  // enableHighAccuracy must be set to true to have the heading value.
+  trackingOptions: {
+    enableHighAccuracy: true,
+  },
+  projection: myView.getProjection(),
+});
+geolocation.setTracking(true);
+geolocation.on('change:position', function () {
+  const coordinates = geolocation.getPosition();
+  positionFeature.setGeometry(coordinates ? new Point(coordinates) : null);
+});
+geolocation.on('change:heading', function () {
+  const heading = geolocation.getHeading();
+  positionStyle.getImage().setRotation(heading);
 });
 
 new Map({
@@ -25,9 +74,7 @@ new Map({
     new TileLayer({
       source: new Stamen({layer: 'toner-labels'}),
     }),
+    positionLayer,
   ],
-  view: new View({
-    center: fromLonLat([4.663223,45.9704547]),
-    zoom: 15
-  })
+  view: myView
 });
