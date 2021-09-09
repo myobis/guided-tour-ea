@@ -19,7 +19,7 @@ let myView = new View({
 
 let kmlLayer = new VectorLayer({
   source: new VectorSource({
-    url: './TestLiergues.kml',
+    url: './20210903-080251 - Balade du chien 3 septembre 2021 - Nettoyée.kml',
     format: new KML()
   })
 });
@@ -33,7 +33,7 @@ const positionStyle = new Style({
   image: new Icon({
     src: 'blueArrow.png',
     rotateWithView: true,
-    scale: 1,
+    scale: 0.3,
     rotation: 45 * Math.PI / 180,
   }),
 });
@@ -44,7 +44,6 @@ const positionSource = new VectorSource({
 const positionLayer = new VectorLayer({
   source: positionSource,
 });
-
 
 const geolocation = new Geolocation({
   // enableHighAccuracy must be set to true to have the heading value.
